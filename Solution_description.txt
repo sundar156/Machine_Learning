@@ -1,0 +1,13 @@
+PyHikeathon.ipynb is the solution file for the hikethon competition 
+Here I have merged the training dataset with the features dataset on node1_id and node_id  in the features dataset using inner join ,since many node1_id's in Tarin dataset did not have corresponding records in features and I did not want junk values 
+or do a fill na in the training dataset.Later 
+
+I did a left join on test data and the features dataset since I want to predict the outcomes for all the node1_id in the Test data set.
+There was class imbalance in teh traindataset where we had more number if is_chat=0 and very few 1's.I have tried to normalize that using stratify=y 
+and class_weight='balanced' hyper parameters. I have trained and tested using the train datset and predicted for the test data provided.
+The predicted probability is given in the submit_results.csv for each node1_id's in test.csv, rounded to 2 decimal points.
+I have trained and tested using the train datset and predicted for teh test data provided.
+
+"id" column in your solution file has "10726968" missing values.
+
+9679296
